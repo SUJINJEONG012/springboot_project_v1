@@ -19,26 +19,26 @@ class ProjectV1ApplicationTests {
 	}
 	
 	
-//	@Test
-//	public void testApplicationContext() {
-//		try {
-//			System.out.println("=================");
-//			System.out.println(context.getBean("sqlSessionFactory"));
-//		}catch(Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
-//	
-//	@Test
-//	public void testSqlSessionFactory() {
-//		try {
-//			System.out.println("=================================");
-//			System.out.println(sessionFactory.toString());
-//			System.out.println("=================================");
-//		}catch(Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
+	@Test
+	public void testApplicationContext() {
+		try {
+			System.out.println("=================");
+			System.out.println(context.getBean("sqlSessionFactory"));
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	public void testSqlSessionFactory() {
+		try {
+			System.out.println("=================================");
+			System.out.println(sessionFactory.toString());
+			System.out.println("=================================");
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
 	
 
 }
