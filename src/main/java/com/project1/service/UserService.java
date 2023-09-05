@@ -6,17 +6,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.project1.domain.User;
-import com.project1.mapper.UserMapper;
+import com.project1.repository.UserRepository;
 
 @Service
 public class UserService {
-	private final UserMapper userMapper;
 	@Autowired
-	public UserService(UserMapper userMapper) {
-		this.userMapper=userMapper;
-	}
+	private  UserRepository userRepository;
+	
 	
 	public List<User> finalAll(){
-		return userMapper.findAll();
+		return userRepository.findAll();
 	}
 }

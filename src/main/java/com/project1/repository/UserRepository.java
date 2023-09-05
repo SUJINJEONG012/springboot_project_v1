@@ -1,4 +1,4 @@
-package com.project1.mapper;
+package com.project1.repository;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Select;
 import com.project1.domain.User;
 
 @Mapper
-public interface UserMapper {
+public interface UserRepository {
 
 	@Select("select * from user")
 	List<User> findAll();

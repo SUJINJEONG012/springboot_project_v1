@@ -18,7 +18,7 @@
 	update users set name= #{name}, email= #{email} where id = #{id}
 </select>
 
-<delete id="delete" parameterType="com.project1.domain.User">
+<delete id="delete" parameterType="int">
 	delete from users where id = #{id}
 </delete>
 
