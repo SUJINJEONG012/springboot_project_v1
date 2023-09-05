@@ -10,6 +10,7 @@ import com.project1.repository.UserRepository;
 
 @Service
 public class UserService {
+	
 	@Autowired
 	private  UserRepository userRepository;
 	
