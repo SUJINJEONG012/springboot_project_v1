@@ -9,7 +9,8 @@ public class WebController {
 
 	@RequestMapping(value="/")
 	public String main(Model model) {
-		model.addAttribute("template", "fragment/content/main");
-		return "idnex";
+		model.addAttribute("template", "fragments/content/main");
+		return "index";
 	}
+
 }
