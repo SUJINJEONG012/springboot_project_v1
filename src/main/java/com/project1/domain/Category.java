@@ -10,9 +10,13 @@ import javax.persistence.Id;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @ToString
 @Getter
 @Entity
@@ -30,6 +34,15 @@ public class Category {
 	private LocalDateTime createTimestamp;
 	@UpdateTimestamp
 	private LocalDateTime updateTimestamp;
+	
+	
+	@Builder
+    public Category(Long idParent, String title, String icon, String description) {
+        this.idParent = idParent;
+        this.title = title;
+        this.icon = icon;
+        this.description = description;
+    }
 	
 	
 	
