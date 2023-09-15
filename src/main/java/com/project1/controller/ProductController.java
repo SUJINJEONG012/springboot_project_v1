@@ -7,11 +7,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.project1.domain.Product;
 import com.project1.service.ProductService;
 
 @Controller
+@RequestMapping("/product")
 public class ProductController {
 
 	@Autowired
@@ -24,15 +26,17 @@ public class ProductController {
 	   	return "index";
 	}
 	
-	//상품 목로 조회
-	@GetMapping("/view/list/{id}")
+	//상품 목록 조회
+    @RequestMapping(value = "/view/list/{id}")
 	public String viewProductList(@PathVariable Long id, Model model) {
-		//data
-		List<Product> productList = productService.getProductList(id);
-		model.addAttribute("productList", productList);
-		//view
-		model.addAttribute("template", "fragments/content/product/list");
-		return "index";
+		
+    	//data
+    	List<Product> productList = productService.getProductList(id);
+    	model.addAttribute("productList",productList);
+    	
+    	//view
+    	model.addAttribute("template", "fragments/content/product/list");
+    	return "index";
 		
 	}
   	

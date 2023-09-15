@@ -28,7 +28,6 @@ public class Product {
 	
 	private String name;
 	private Long price;
-	private Long title;
 	private String description;
 	private String imageUrl;
 	private String color;
