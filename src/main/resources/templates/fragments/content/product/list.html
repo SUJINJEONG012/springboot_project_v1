@@ -30,7 +30,7 @@
                             </a>
                         </div>
                         <!-- main -->
-                        <a th:href="@{/product/view/detail}">
+                        <a th:href="@{'/product/view/detail/' + ${product.id}}">
                             <h3 class="text-dark profile-username text-center" th:text="${product.name}"></h3>
                             <p class="text-muted text-center" th:text="${product.size}"></p>
                             <p class="text-dark text-center" th:text="${product.price}"></p>
