@@ -14,10 +14,10 @@ public class WebController {
 		return "index";
 	}
 
-	@GetMapping("/product")
-	public String index(Model model) {
-	   	model.addAttribute("template","fragments/content/product");
-	   	return "index";
-	}
+//	@GetMapping("/product")
+//	public String index(Model model) {
+//	   	model.addAttribute("template","fragments/content/product");
+//	   	return "index";
+//	}
   	
 }
